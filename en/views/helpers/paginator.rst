@@ -38,7 +38,12 @@ customize multiple templates and keep your code DRY::
         $this->loadHelper('Paginator', ['templates' => 'paginator-templates']);
     }
 
-This will load the file located at **config/paginator-templates.php**. See the
+Or inside view::
+
+    // In index.ctp
+    $this->Paginator->templater()->load('paginator-templates');
+
+In both cases it will load the file located at **config/paginator-templates.php**. See the
 example below for how the file should look like. You can also load
 templates from a plugin using :term:`plugin syntax`::
 
